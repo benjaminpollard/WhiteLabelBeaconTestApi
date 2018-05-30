@@ -67,7 +67,13 @@ app.get("/offers", function(req, res) {
 
 });
 
+app.get("/streamEndPoint", function(req, res) {
+  var accountMock = {
+      "endpoint": "https://www.mosquitodigital.co.uk/"
+  }
+  return res.send(accountMock);
 
+});
 
 }
 
