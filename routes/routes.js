@@ -3,7 +3,7 @@ var appRouter = function(app) {
       res.send("Hello World");
   });
 
-  app.get("/beacons", function(req, res) {
+  app.get("/beacons/whitelabel", function(req, res) {
     var accountMock = {
         "beacons": [
         {
@@ -28,19 +28,12 @@ var appRouter = function(app) {
     ]
     }
     return res.send(accountMock);
-    //
-    // if(!req.query.username) {
-    //     return res.send({"status": "error", "message": "missing username"});
-    // } else if(req.query.username != accountMock.username) {
-    //     return res.send({"status": "error", "message": "wrong username"});
-    // } else {
-    // }
 });
 
 
 ///////////
 
-app.get("/offers", function(req, res) {
+app.get("/offers/whitelabel", function(req, res) {
   var accountMock = {
       "offers": [
       {
@@ -67,7 +60,7 @@ app.get("/offers", function(req, res) {
 
 });
 
-app.get("/stream", function(req, res) {
+app.get("/stream/whitelabel", function(req, res) {
   var accountMock = {
       "endpoint": "https://www.mosquitodigital.co.uk/"
   }
